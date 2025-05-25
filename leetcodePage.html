@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problems - LeetCode</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    .nav1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: inline-block;
+        height: 23px;
+        margin: 8px 8px 0px 18px;
+    }
+
+    .js {
+        background-color: #fff;
+        color: rgb(238, 139, 1);
+        padding: 0px 2.2px;
+        font-weight: 600;
+        font-size: 13px;
+        border-radius: 3px;
+    }
+
+    .js30 {
+        color: white;
+        font-size: 12px;
+        font-weight: 550;
+    }
+
+    .bi-chevron-left,
+    .bi-chevron-right,
+    .bi-shuffle,
+    .bi-play-fill,
+    .bi-bug,
+    .bi-cloud-arrow-up,
+    .bi-alarm,
+    .bi-sticky,
+    .bi-columns-gap,
+    .bi-gear,
+    .bi-person-circle,
+    .bi-fire {
+        color: rgb(147, 147, 147);
+        font-size: 14px;
+    }
+
+    .div1-nav,
+    .div2-nav,
+    .div3-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .div1-nav span,
+    .div3-nav span {
+        margin: 5px;
+    }
+
+    .div2-nav span {
+        margin: 2px;
+    }
+
+    .div2-nav span {
+        background-color: #222222;
+        border-radius: 4px;
+    }
+
+    .submit {
+        color: rgb(2, 184, 2);
+        display: flex;
+        align-items: center;
+    }
+
+    .bi-play-fill {
+        font-size: 23px;
+        display: flex;
+        padding: 4px;
+        align-items: center;
+    }
+
+    .bi-play-fill b {
+        font-size: 15px;
+    }
+
+    .bi-bug,
+    .bi-cloud-arrow-up,
+    .bi-alarm,
+    .bi-sticky {
+        padding: 6px;
+
+    }
+
+    .run {
+        font-size: 12px;
+        font-weight: 600;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(227, 226, 226);
+    }
+
+    .submit2 {
+        font-size: 12px;
+        font-weight: 600;
+        padding-left: 2px;
+    }
+
+    .div3-nav span {
+        margin: 10px;
+    }
+
+    .premium {
+        color: rgb(233, 156, 1);
+        font-size: 15px;
+        background-color: #f4c50741;
+        padding: 4px;
+        border-radius: 5px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+    }
+
+    main .div1-main {
+        background-color: #212121;
+        height: 93vh;
+        width: 48.8vw;
+        margin-left: 8px;
+        border-radius: 9px;
+        border: 1px solid rgb(87, 87, 87);
+    }
+
+    main .div2-main {
+        background-color: #212121;
+        height: 92vh;
+        width: 49vw;
+        margin-right: 7px;
+        border-radius: 9px;
+    }
+
+    .sub-nav {
+        background-color: #3d3d3d;
+        /* height: 30px; */
+        padding: 6.5px;
+        font-size: 13px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+    }
+
+    .sub-nav span {
+        margin: 0px 4px;
+    }
+
+    .bi-card-text {
+        color: #b8b7d4;
+    }
+
+    .bi-book {
+        color: rgb(149, 117, 10);
+    }
+
+    .bi-card-text {
+        color: rgb(0, 110, 255);
+    }
+
+    .descri,
+    .bi-lock-fill {
+        color: whitesmoke;
+    }
+
+    .bi-arrow-counterclockwise,
+    .bi-check-square {
+        color: rgb(6, 74, 162);
+    }
+
+    .text-subnav {
+        color: #b1b1b1;
+    }
+
+    h1 {
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    .div1-text {
+        padding: 13px;
+    }
+
+    .easy {
+        color: #25dd8a;
+    }
+
+    .easy,
+    .bi-lock-fill {
+        background-color: #454545;
+        padding: 1px 5px 2px 5px;
+        border-radius: 10px;
+        font-size: 11px;
+    }
+
+    .esy-com {
+        padding-top: 9px;
+    }
+
+    .Q-text {
+        color: white;
+        padding-top: 17px;
+        font-size: 13.4px;
+    }
+
+    .Q-text var {
+        border: 1px solid rgb(96, 96, 96);
+        border-radius: 7px;
+        background-color: #343434;
+        font-size: 13px;
+        color: #b8b8b8;
+        padding: 0px 2px;
+    }
+
+    .Q-text samp {
+        border: 1px solid rgb(96, 96, 96);
+        border-radius: 7px;
+        background-color: #343434;
+        font-size: 13px;
+        color: #b8b8b8;
+        padding: 0px 2px;
+    }
+
+    .exa1 {
+        color: rgb(175, 175, 175);
+        font-size: 14px;
+        padding-top: 28px;
+    }
+
+    .exa2 {
+        color: rgb(175, 175, 175);
+        font-size: 14px;
+        padding-top: 28px;
+    }
+
+    h2 {
+        color: white;
+        font-size: 14px;
+        padding-bottom: 11px;
+    }
+
+    .exa1 b {
+        color: white;
+    }
+
+    .exa2 b {
+        color: white;
+    }
+
+    .exa1 pre {
+        padding-left: 10px;
+        border-left: 2px solid rgb(73, 73, 73);
+        line-height: 22px;
+    }
+
+    .exa2 pre {
+        padding-left: 10px;
+        border-left: 2px solid rgb(73, 73, 73);
+        line-height: 22px;
+    }
+
+    .constr {
+        color: white;
+        padding-top: 22px;
+        font-size: 15px;
+    }
+
+    .constr span {
+        color: #858484;
+        background-color: #373737;
+        padding: 0.5px 6px;
+        border-radius: 10px;
+        font-size: 14px;
+        border: 1px solid rgb(82, 82, 82);
+    }
+
+    .constr ul {
+        padding: 15px 0px 0px 25px;
+    }
+
+    .constr h3 {
+        font-size: 14px;
+    }
+
+    .bi-code-slash {
+        color: green;
+    }
+
+    .code {
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .div2-subnav {
+        background-color: #353535;
+        padding: 6px;
+        border-top-left-radius: 9px;
+        border-top-right-radius: 9px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="nav1">
+            <div class="div1-nav">
+                <span> <img class="logo" src="../Images/LeetCode_Logo_1.png"></span>
+                <span class="js">JS</span>
+                <span class="js30">30 Days of JavaScript</span>
+                <span class="bi bi-chevron-left"></span>
+                <span class="bi bi-chevron-right"></span>
+                <span class="bi bi-shuffle"></span>
+            </div>
+            <div class="div2-nav">
+                <span class="bi bi-bug"></span>
+                <span class="bi bi-play-fill"><span class="run">Run</span></span>
+                <span class="bi bi-cloud-arrow-up submit"><span class="submit2"> Submit</span></span>
+                <span class="bi bi-alarm"></span>
+                <span class="bi bi-sticky"></span>
+            </div>
+            <div class="div3-nav">
+                <span class="bi bi-columns-gap"></span>
+                <span class="bi bi-gear"></span>
+                <span class="bi bi-fire">0</span>
+                <span class="bi bi-person-circle"></span>
+                <span class="premium">Premium</span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="div1-main">
+            <nav class="sub-nav">
+                <span class="bi bi-card-text">
+                    <span class="descri">Description</span>
+                </span>
+
+                <span class="bi bi-book">
+                    <span class="text-subnav">Editorial</span>
+                </span>
+
+                <span class="bi bi-check-square">
+                    <span class="text-subnav">Solutions</span>
+                </span>
+
+                <span class="bi bi-arrow-counterclockwise">
+                    <span class="text-subnav">Submitions</span>
+                </span>
+            </nav>
+
+            <div class="div1-text">
+                <h1>2667. Create Hello World Function</h1>
+                <div class="esy-com">
+                    <span class="easy">Easy</span>
+                    <span class="bi bi-lock-fill">Companies</span>
+                </div>
+
+                <div class="Q-text">
+                    Write a function <var>createHelloWorld</var> . It should return a new function that always returns
+                    <samp>"Hello World"</samp> .
+                </div>
+
+                <div class="exa1">
+                    <h2>Example 1:</h2>
+                    <pre>
+<b>Input:</b> args = []
+<b>Output:</b> "Hello World"
+<b>Explanation:</b>
+const f = createHelloWorld();
+f(); // "Hello World"  
+
+The function returned by createHelloWorld should always return "Hello World".     </pre>
+                </div>
+
+                <div class="exa2">
+                    <h2>Example 2:</h2>
+                    <pre>
+<b>Input:</b> args = [{},null,42]
+<b>Output:</b> "Hello World"
+<b>Explanation:</b>
+const f = createHelloWorld();
+f({}, null, 42); // "Hello World"
+
+Any arguments could be passed to the function but it should still always return "Hello World".
+                </div>
+
+                <div class="constr">
+                    <h3>Constrains:</h3>
+                    <ul>
+                        <li>
+                            <span>0 <= args.length <= 10</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="div2-main">
+            <nav class="div2-subnav">
+                <span class="bi bi-code-slash"></span>
+                <span class="code">Code</span>
+            </nav>
+            <div class="lang">
+                <span> <select name="lang" class="sel-lang">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="TypeScript">TypeScript</option>
+                </select> </span>
+                <span>
+                    <ul>
+                        <li>Auto</li>
+                    </ul>
+                </span>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
