@@ -1,6 +1,6 @@
 # Small_Web_Pages
 
-Created Small Web Pages using HTML5, CSS3 & BOTSTRAP.
+Created Small Web Pages using HTML5, CSS3 & BOOTSTRAP.
 <br>
 1.Flipkart Page
 <br>
