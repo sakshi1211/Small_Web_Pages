@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naresh i Technologies - Youtube</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        border: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    /* Horizontal Navbar Styling */
+    header nav {
+        background-color: black;
+        padding: 8px 25px;
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-box img {
+        height: 30px;
+    }
+
+    .search-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-box {
+        display: flex;
+        align-items: center;
+    }
+
+    .bi-list {
+        font-size: 22px;
+        color: #c3c3c3;
+    }
+
+    input[type="text"] {
+        background-color: rgb(0, 0, 0);
+        border: none;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .search {
+        width: 39vw;
+        border: 1px solid rgb(55, 55, 55);
+        display: flex;
+        justify-content: space-between;
+        border-radius: 20px;
+    }
+
+    input[type="text"]::placeholder {
+        color: #929292;
+        font-weight: 500;
+        width: 80%;
+        font-size: 16px;
+        border: none;
+        padding: 8px 15px;
+    }
+
+    .search-icon {
+        background-color: #2d2d2d;
+        padding: 9px 15px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .bi-mic-fill {
+        background-color: #272727;
+        padding: 10px 12px;
+        margin-left: 5px;
+        border-radius: 50%;
+    }
+
+    .account {
+        background-color: #cd0186;
+        padding: 6px 12px;
+        border-radius: 50%;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .create-notif span {
+        margin-left: 18px;
+    }
+
+    .bi-camera-video,
+    .bi-bell {
+        font-size: 20px;
+    }
+
+    .bi-list,
+    .bi-bell,
+    .bi-mic-fill,
+    .bi-camera-video,
+    .bi-search,
+    .account {
+        cursor: pointer;
+    }
+
+
+    /* Verticle Navbar Styling */
+    .ver-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 5%;
+    }
+
+    .ver-nav span {
+        color: white;
+        padding: 5px;
+        margin: 10px;
+        display: inline-block;
+        height: 5px;
+    }
+
+    .bi-house-door,
+    .bi-collection-play,
+    .bi-play-btn,
+    .bi-film {
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .text-nav {
+        font-size: 11.5px;
+    }
+
+    .icon-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 85px;
+    }
+
+    /* Image Section Styling */
+    .main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .naresh-img {
+        width: 84vw;
+        padding: 0px 10px 10px 10px;
+        border-radius: 30px;
+    }
+
+    .img-sec {
+        width: 95%;
+        margin-left: 60px;
+    }
+
+    /* About Channel Styling */
+
+    .info {
+        padding: 10px;
+        color: white;
+    }
+
+    .logo img {
+        display: flex;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    .about-channel {
+        display: flex;
+        padding: 10px;
+    }
+
+    .info h1 {
+        font-size: 34px;
+        padding-bottom: 5px;
+    }
+
+    .info p {
+        color: #bbbbbb;
+        padding-bottom: 6px;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(8, 135, 254);
+        font-weight: 400;
+    }
+
+    .info span {
+        display: inline-block;
+        font-weight: 500;
+    }
+
+    .info button {
+        margin-top: 15px;
+        padding: 7px 13px;
+        font-weight: 500;
+        font-size: 15px;
+        border-radius: 17px;
+        background-color: white;
+    }
+
+    .info button:hover {
+        cursor: pointer;
+        background-color: #cccccc;
+    }
+
+    /* Channel Nav Styling */
+    .channel-nav {
+        color: #929292;
+        font-weight: 500;
+        font-size: 17px;
+        padding-bottom: 6.4px;
+        border-bottom: 1px solid rgb(61, 61, 61);
+    }
+
+    .channel-nav span {
+        padding: 5px;
+        margin: 5px 9px;
+    }
+
+    .channel-nav span:hover {
+        cursor: pointer;
+    }
+
+    .home {
+        color: white;
+        border-bottom: 2px solid white;
+    }
+
+    /* Introduction Video & Info Styling */
+
+    .intro-video-text {
+        padding: 20px;
+        color: white;
+        display: flex;
+    }
+
+    iframe {
+        border-radius: 15px;
+    }
+
+    .video-info {
+        margin-left: 30px;
+        width: 27.9vw;
+        font-size: 14.8px;
+    }
+
+    .video-info p {
+        padding: 8px 0px;
+    }
+
+    .years-ago {
+        color: #909090;
+        font-size: 13px;
+    }
+
+    .best-soft {
+        font-weight: 500;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="hori-nav">
+            <div class="logo-box">
+                <span class="bi bi-list"></span>
+                <img src="../Images/Youtube-Logo.png" alt="youtub-logo">
+            </div>
+            <div class="search-box">
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                    <span class="bi bi-search search-icon"></span>
+                </div>
+                <div class="bi bi-mic-fill"></div>
+            </div>
+            <div class="create-notif">
+                <span class="bi bi-camera-video"></span>
+                <span class="bi bi-bell"></span>
+                <span class="account">S</span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main">
+
+        <nav class="ver-nav">
+            <div class="icon-box">
+                <span class="bi bi-house-door"></span>
+                <span class="text-nav">Home</span>
+            </div>
+
+            <div class="icon-box">
+                <span class="bi bi-film"></span>
+                <span class="text-nav"> Shorts</span>
+            </div>
+
+            <div class="icon-box">
+                <span class="bi bi-collection-play"></span>
+                <span class="text-nav"> Subscriptions</span>
+            </div>
+
+            <div class="icon-box">
+                <span class="bi bi-play-btn"></span>
+                <span class="text-nav"> You</span>
+            </div>
+        </nav>
+
+        <section class="img-sec">
+            <div class="img-box">
+                <img src="../Images/naresh-channels4_banner.jpg" alt="naresh-img" class="naresh-img">
+            </div>
+
+            <div class="about-channel">
+
+                <div class="logo">
+                    <img src="../Images/Naresg-logo.jpg" alt="logo">
+                </div>
+
+                <div class="info">
+                    <h1>Naresh i Technologies</h1>
+                    <p>@NareshIT
+                        •
+                        1.28M subscribers
+                        •
+                        3.1K videos</p>
+                    <p>We are one of the software training organization With a library of 200+ courses, we have </p>
+                    <span>
+                        <a href="https://www.instagram.com/nareshitech/">instagram.com/nareshitech</a>
+                        and 7 more links
+                    </span>
+                    <br>
+                    <button>Subscribe</button>
+                </div>
+            </div>
+
+            <nav class="channel-nav">
+                <span class="home">Home</span>
+                <span>Videos</span>
+                <span>Shorts</span>
+                <span>Live</span>
+                <span>Playlist</span>
+                <span>Community</span>
+                <span class="bi bi-search search-icon2"></span>
+            </nav>
+
+            <div class="intro-video-text">
+                <iframe width="436" height="234" src="https://www.youtube.com/embed/yBw-6rr5hbA"
+                    title="Best Software Training Institute with Placements - Naresh i Technologies" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <div class="video-info">
+                    <p class="best-soft">Best Software Training Institute with Placements - Naresh i Te...</p>
+
+                    <p class="years-ago">223,914 views
+                        4 years ago</p>
+
+                    <p>Register For Free Demos On New Batches :-</p>
+
+                    <p>Placement Assistance Program On JAVA Developer & .Net | @ 11.00 AM :- <a
+                            href="">https://bit.ly/PAP11J</a> <br>
+                        Free Workshop on Career Transformation from Non-Tech to Data Science AI & Generative AI | @ 9:30
+                        AM
+                        :- <a href=""> https://bit.ly/3WB7z3z</a>...</p>
+
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+</body>
+
+</html>
