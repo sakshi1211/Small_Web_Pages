@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intra Document Links</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+        color: white;
+        background-color: #c70185;
+        padding: 20px 70px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav {
+        background-color: #ffffff;
+        display: inline-block;
+        border: 1px solid rgb(196, 196, 196);
+        padding: 25px 70px 30px 28px;
+        width: 180px;
+        height: 82.6vh;
+        position: sticky;
+        top: 20px;
+    }
+
+    .nav-ul li {
+        list-style: none;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #e1e1e1;
+        margin-top: 20px;
+        font-weight: 500;
+        color: #c70185;
+    }
+
+    h1 {
+        font-size: 37px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .btn1 a {
+        color: #c70185;
+    }
+
+    .btn1 {
+        background-color: #fff;
+        font-weight: 600;
+        padding: 3px 12px;
+        border: none;
+        border-radius: 10px;
+        height: 31px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .nav-main {
+        display: flex;
+    }
+
+    main {
+        padding: 20px;
+        margin: 10px;
+        width: 80vw;
+    }
+
+    img {
+        height: 280px;
+    }
+
+    .img-box {
+        display: flex;
+    }
+
+    .img-box span {
+        font-size: 17px;
+        line-height: 30px;
+        word-spacing: 5px;
+        padding: 20px;
+        color: #545454;
+    }
+
+    .img-box .women-word {
+        font-size: 30px;
+    }
+
+    h2 {
+        padding: 18px;
+    }
+
+    .points {
+        color: #545454;
+        font-size: 17px;
+        line-height: 30px;
+        word-spacing: 5px;
+        padding: 20px 0px 20px 20px;
+        padding-top: 5px;
+    }
+
+    .boxes-in-main{
+        border-bottom: 1px solid rgb(203, 203, 203);
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+    footer{
+        background-color: black;
+        display: flex;
+        padding-bottom: 20px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+    }
+    .top-back{
+        color: white;
+        width: 98.9vw;
+        padding: 20px 0px;
+        overflow-x: hidden;
+        text-align: center;
+        background-color: #484848;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .top-back a{
+        color: white;
+        text-decoration: none;
+    }
+    .ftext{
+        width: 80%;
+        text-align: center;
+        padding: 30px;
+        color: #cacaca;
+    }
+    .social{
+        font-size: 18px;
+        padding: 5px;
+        margin: 10px;
+    }
+    .bi-facebook , .bi-instagram, .bi-twitter-x, .bi-youtube {
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <header id="home">
+        <h1>Fashion.Info</h1>
+        <button class="btn1"><a href="loginPage.html">Login</a></button>
+    </header>
+
+    <div class="nav-main">
+        <div class="nav-box">
+        <nav>
+            <ul class="nav-ul">
+                <a href="#home">
+                    <li>Home</li>
+                </a>
+                <a href="#women">
+                    <li>Womens Fashion</li>
+                </a>
+                <a href="#men">
+                    <li>Mens Fashion</li>
+                </a>
+                <a href="#kids">
+                    <li>Kids Fashion</li>
+                </a>
+            </ul>
+        </nav>
+    </div>
+
+        <main>
+
+            <div class="womens boxes-in-main" id="women">
+
+                <div class="title-box">
+                    <h2>Womens Fashion</h2>
+                </div>
+
+                <div class="img-box">
+                    <span>
+                        <img src="../Practice/Images/womens-fashion.jpg" alt="women-img">
+                    </span>
+                    <span> <span class="women-word">Women </span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, dignissimos voluptatem repellat
+                        ipsa vero deserunt delectus earum totam, fugiat beatae nisi neque consequatur, dolorum
+                        consectetur illo placeat eius explicabo Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Dignissimos.perspiciatis!ipsum dolor sit amet consectetur adipisicing elit. Nobis quidem
+                        ullam, quod eaque, ratione suscipit Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                        vel fugiat quidem aut facilis et Dolores, iste natus modi, enim illo eius sapiente sunt nobis
+                        placeat aliquam laudantium, sit amet consectetur adipisicing elit. At distinctio, expedita sit
+                        similique tenetur esse rerum, non voluptates dolorum, vel eaque error tempore nesciunt
+                        blanditiis. Dolores voluptas nemo at qui? aspernatur optio illum quibusdam nemo, debitis
+                        possimus rerum distinctio eveniet ad qui quos dolores perspiciatis.</span>
+                </div>
+
+                <div class="points">
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio saepe dignissimos, placeat
+                            consectetur accusamus iusto quos totam sed fuga, nam maiores? Nulla autem quibusdam, maxime
+                            omnis deserunt perspiciatis cupiditate laudantium.</li> <br>
+                        <li>Lorem ipsum dolor solut amet consectetur adipisicing elit. Illum nulla facilis tempora in.
+                            Earum reiciendis labore quodquod soluta architecto quibusdam quos in  doloremque dolores
+                            necessitatibus laudantium ipsa, et est. Temporibus!</li> <br>
+                        <li>Lorem ipsum dolor soluta sit amet consectetur adipisicing elit. Illum nulla facilis tempora in.
+                            Earum reiciendis labore quod soluta architecto quibusdam quos in doloremque dolores
+                            necessitatibus laudantium ipsa, et est. Temporibus!</li> <br>
+                        <li>Lorem ipsum dolor sit soluta amet consectetur adipisicing elit. Illum nulla facilis tempora in.
+                            Earum reiciendis labore quod soluta architecto quibusdam quos in doloremque dolores
+                            necessitatibus laudantium ipsa, et est. Temporibus!</li> <br>
+                        <li>Lorem ipsum soluta dolor sit amet consectetur adipisicing elit. Illum nulla facilis tempora in.
+                            Earum reiciendis labore quod soluta architecto quibusdam quos in doloremque dolores
+                            necessitatibus laudantium ipsa, et est. Temporibus!</li>
+
+                    </ol>
+                </div>
+
+            </div>
+
+
+
+            <div class="mens boxes-in-main" id="men">
+
+                <div class="title-box">
+                    <h2>Mens Fashion</h2>
+                </div>
+
+                <div class="img-box">
+                    <span>
+                        <img src="../Practice/Images/mens-fashion.jpg" alt="women-img">
+                    </span>
+                    <span> <span class="women-word">Men </span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, dignissimos voluptatem repellat
+                        ipsa vero deserunt delectus earum totam, fugiat beatae nisi neque consequatur, dolorum
+                        consectetur illo placeat eius explicabo Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Dignissimos.perspiciatis!ipsum dolor sit amet consectetur adipisicing elit. Nobis quidem
+                        ullam, quod eaque, ratione suscipit Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                        vel fugiat quidem aut facilis et Dolores, iste natus modi, enim illo eius sapiente sunt nobis
+                        placeat aliquam laudantium, sit amet consectetur adipisicing elit. At distinctio, expedita sit
+                        similique tenetur esse rerum, non voluptates dolorum, vel eaque error tempore nesciunt
+                        blanditiis. Dolores voluptas nemo at qui? aspernatur optio illum quibusdam nemo, debitis
+                        possimus rerum distinctio eveniet ad qui quos dolores perspiciatis.</span>
+                </div>
+
+                <div class="points">
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio saepe dignissimos, placeat
+                            consectetur accusamus iusto quos totam sed fuga, nam maiores? Nulla autem quibusdam, maxime
+                            omnis deserunt perspiciatis cupiditate laudantium.</li> <br>
+                        <li>Lorem ipsum dolor solut amet consectetur adipisicing elit. Illum nulla facilis tempora in.
+                            Earum reiciendis labore quodquod soluta architecto quibusdam quos in  doloremque dolores
+                            necessitatibus laudantium ipsa, et est. Temporibus!</li> <br>
+                        <li>Lorem ipsum dolor soluta sit amet consectetur adipisicing elit. Illum nulla facilis tempora in.
+                            Earum reiciendis labore quod soluta architecto quibusdam quos in doloremque dolores
+                            necessitatibus laudantium ipsa, et est. Temporibus!</li> <br>
+                        <li>Lorem ipsum dolor sit soluta amet consectetur adipisicing elit. Illum nulla facilis tempora in.
+                            Earum reiciendis labore quod soluta architecto quibusdam quos in doloremque dolores
+                            necessitatibus laudantium ipsa, et est. Temporibus!</li> <br>
+                        <li>Lorem ipsum soluta dolor sit amet consectetur adipisicing elit. Illum nulla facilis tempora in.
+                            Earum reiciendis labore quod soluta architecto quibusdam quos in doloremque dolores
+                            necessitatibus laudantium ipsa, et est. Temporibus!</li>
+
+                    </ol>
+                </div>
+
+            </div>
+
+
+
+            <div class="kids boxes-in-main" id="kids">
+
+                <div class="title-box">
+                    <h2>Kids Fashion</h2>
+                </div>
+
+                <div class="img-box">
+                    <span>
+                        <img src="../Practice/Images/kids-fashion2.jpg" alt="women-img">
+                    </span>
+                    <span> <span class="women-word">Kids </span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, dignissimos voluptatem repellat
+                        ipsa vero deserunt delectus earum totam, fugiat beatae nisi neque consequatur, dolorum
+                        consectetur illo placeat eius explicabo Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Dignissimos.perspiciatis!ipsum dolor sit amet consectetur adipisicing elit. Nobis quidem
+                        ullam, quod eaque, ratione suscipit Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                        vel fugiat quidem aut facilis et Dolores, iste natus modi, enim illo eius sapiente sunt nobis
+                        placeat aliquam laudantium, sit amet consectetur adipisicing elit. At distinctio, expedita sit
+                        similique tenetur esse rerum, non voluptates dolorum, vel eaque error tempore nesciunt
+                        blanditiis. Dolores voluptas nemo at qui? aspernatur optio illum quibusdam nemo, debitis
+                        possimus rerum distinctio eveniet ad qui quos dolores perspiciatis.</span>
+                </div>
+
+                <div class="points">
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio saepe dignissimos, placeat
+                            consectetur accusamus iusto quos totam sed fuga, nam maiores? Nulla autem quibusdam, maxime
+                            omnis deserunt perspiciatis cupiditate laudantium.</li> <br>
+                        <li>Lorem ipsum dolor solut amet consectetur adipisicing elit. Illum nulla facilis tempora in.
+                            Earum reiciendis labore quodquod soluta architecto quibusdam quos in  doloremque dolores
+                            necessitatibus laudantium ipsa, et est. Temporibus!</li> <br>
+                        <li>Lorem ipsum dolor soluta sit amet consectetur adipisicing elit. Illum nulla facilis tempora in.
+                            Earum reiciendis labore quod soluta architecto quibusdam quos in doloremque dolores
+                            necessitatibus laudantium ipsa, et est. Temporibus!</li> <br>
+                        <li>Lorem ipsum dolor sit soluta amet consectetur adipisicing elit. Illum nulla facilis tempora in.
+                            Earum reiciendis labore quod soluta architecto quibusdam quos in doloremque dolores
+                            necessitatibus laudantium ipsa, et est. Temporibus!</li> <br>
+                        <li>Lorem ipsum soluta dolor sit amet consectetur adipisicing elit. Illum nulla facilis tempora in.
+                            Earum reiciendis labore quod soluta architecto quibusdam quos in doloremque dolores
+                            necessitatibus laudantium ipsa, et est. Temporibus!</li>
+
+                    </ol>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <div class="top-back">
+            <a href="#home">Back to Top</a>
+        </div>
+
+        <div class="ftext">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet rem mollitia dolore doloribus dolorem facere hic distinctio id velit ex fugiat repudiandae maiores et vitae voluptates esse, consequatur possimus expedita.
+        </div>
+        
+        <div class="social">
+            <span class="bi bi-facebook"></span>
+            <span class="bi bi-instagram"></span>
+            <span class="bi bi-twitter-x"></span>
+            <span class="bi bi-youtube"></span>
+        </div>
+    </footer>
+</body>
+
+</html>
